@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Unique, handmade acrylic keychains from a variety of selections to choose from!">
+    <meta name="author" content="862439714">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Title of your Website -->
+    <title>Acrylic Keychains</title>
+    <link href="product.css" rel="stylesheet">
+    </head>
+  <body>
+    <nav class="site-header sticky-top py-1">
+    <!-- Top Menu Bar -->
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-1" href="https://www.robotdancebattle.com/products/tuxedo-cat-acrylic-keychain" target="_blank">Tux Cat</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-2" href="https://tsunscoops.com/shop/p/yohane-the-parhelion-x-tsun-scoops-vinyl-peeker-stickers-pre-order-n45dk-9gz7p" target="_blank">GGS</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-3" href="https://www.etsy.com/listing/1115637869/black-siberian-husky-acrylic-dog-breed?gpla=1&gao=1&" target="_blank">Husky 1</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-4" href="https://www.etsy.com/uk/listing/1340604803/cute-working-bunny-life-acrylic-keychain?gpla=1&gao=1&ref=pagination&page=7" target="_blank">Bunny 1</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-5" href="https://www.etsy.com/listing/1340604803/cute-working-bunny-life-acrylic-keychain" target="_blank">Bunny 2</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-6" href="https://sugarbubbas.com/products/husky-dog-acrylic-pet-keychain" target="_blank">Husky 2</a>
+        <a class="py-2 d-none d-md-inline-block" id="menu-item-7" href="https://www.papercranesdesign.co/products/cozy-kitty-acrylic-keychain" target="_blank">Cozy Kitty</a>
+    </div>
+</nav>
+<!-- Main Header Section h1-->
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-0 text-center bg-light">
+    <div class="col-md-8 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">New Acrylic Keychains Coming Soon</h1>
+        <p class="lead font-weight-normal">Unique, handmade acrylic keychains from a variety of selections to choose from!</p>
+        <a class="btn btn-outline-secondary" href="https://www.etsy.com/uk/listing/1659784513/acrylic-keychain-cute-keychain-silver?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=acrylic+keychains+cute&ref=sr_gallery-1-24&cns=1&content_source=391a28e0f6ba938b562bd72f54a63376dd7ecfa5%253A1659784513&search_preloaded_img=1&organic_search_click=1">Coming soon</a>
+    </div>
+</div>
+<!-- Left Tile -->
+<div class="d-md-flex flex-md-equal w-100">
+    <div class="bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+            <h2 class="display-5">Sign up</h2>
+            <p class="lead">Sign up now to get instant access to our educational content</p>
+        </div>
+        <!-- Web form when submitted will send a text message -->
+        <form class="p-2" onsubmit="sendTextMessage(); return false;">
+            <!-- Full Name Form Field -->
+            <div class="form-group">
+                <label for="example-first-name">Full Name</label>
+                <input type="text" value="Full Name" class="form-control" id="example-first-name" aria-describedby="emailHelp">
+            </div>
+            <!-- Phone Number Form Field -->
+            <div class="form-group">
+                <label for="example-tel-input">Phone number</label>
+                <input type="tel" class="form-control" value="1408555555" id="example-tel-input">
+            </div>
+            <!-- JavaScript that handles onSubmit logic -->
+            <!-- Configure the XHR request below with your own credentials -->
+            <script>
+            function sendTextMessage() {
+                console.log("Hello world!");
+                var xhr = new XMLHttpRequest();
+                var accountSID = "AC332e4bd12aee2a7505bcfbefed445e04";
+                var authToken = "4fdd4add45e8b4273074a52c19985c0f";
+                var base64encoded = accountSID + ":" + authToken;
+                var params = "To=" + document.getElementById('example-tel-input').value + "&From=" + "18443081703" + "&Body=" + "Hello " + document.getElementById('example-first-name').value + "Thank you for preordering the new Acrylic Keychain Set!"
+                xhr.open("POST", "https://api.twilio.com/2010-04-01/Accounts/" + accountSID + "/Messages.json", true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.setRequestHeader('Authorization', 'Basic ' + btoa(base64encoded));
+                xhr.send(params);
+            }
+            </script>
+            <!-- Submit button that will execute the sendTextMessage function -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- Right Tile -->
+    <div class="bg-light pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+            <h2 class="display-5">Custom Keychains</h2>
+            <p class="lead">Please click on the link for more info about our custom keychain prices.</p>
+            <img class="mx-auto" src="image.html" height="250px">
+        </div>
+        <div class="mx-auto" style="width: 80%; height: 100px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+</div>
+  </body>
+</html>
